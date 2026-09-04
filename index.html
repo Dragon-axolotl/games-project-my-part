@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Coding Magic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="header">
+    <div class="header-container">
+
+      <a href="#" class="logo">
+        <span class="logo-code">&lt;/&gt;</span>
+
+        <span class="logo-text">
+          Coding
+          <small>Magic</small>
+        </span>
+      </a>
+
+      <nav class="navigation">
+        <a href="#games">Інтерактиви</a>
+        <a href="#team">Наша команда</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+
+      <div class="header-right">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+
+        <span class="user-name">Вітаємо, User!</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================    
+       ОСНОВНОЙ КОНТЕНТ 
+  ========================== -->
+  
+  <main>
+
+    <div class="content">
+
+
+      <!-- =========================
+           МЕСТО ДЛЯ ДРУГИХ ИГР
+      ========================== -->
+
+      <section id="games" class="other-games-placeholder">
+
+        <!--
+          другие игры
+        -->
+
+      </section>
+
+
+      <!-- =========================
+           КАЛЬКУЛЯТОР
+      ========================== -->
+
+      <section class="game-section calculator-section">
+
+        <h2>Калькулятор</h2>
+
+        <div class="calculator">
+
+          <input
+            type="number"
+            id="first-number"
+            class="number-input"
+            placeholder="Введіть число"
+          />
+
+          <div class="calculator-buttons">
+
+            <button type="button" data-operation="add">+</button>
+            <button type="button" data-operation="subtract">−</button>
+            <button type="button" data-operation="multiply">×</button>
+            <button type="button" data-operation="divide">÷</button>
+
+          </div>
+
+          <input
+            type="number"
+            id="second-number"
+            class="number-input"
+            placeholder="Введіть число"
+          />
+
+          <button
+            type="button"
+            id="calculate-button"
+            class="equal-button"
+          >
+            =
+          </button>
+
+          <input
+            type="text"
+            id="calculator-result"
+            class="result-input"
+            placeholder="Результат"
+            readonly
+          />
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           ФУТБОЛ
+      ========================== -->
+
+      <section class="game-section football-section">
+
+        <h2>Футбол</h2>
+
+        <div
+          id="football-field"
+          class="football-field"
+        >
+
+          <div
+            id="football-ball"
+            class="football-ball"
+          >
+            ⚽
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           НАША КОМАНДА
+      ========================== -->
+
+      <section id="team" class="game-section team-section">
+
+        <h2>Наша команда</h2>
+
+        <div class="team-slider">
+
+          <button
+            type="button"
+            class="team-arrow team-prev"
+            id="team-prev"
+          >
+            ‹
+          </button>
+
+
+          <div class="team-card">
+
+            <div class="team-photo">
+              <span>Фото</span>
+            </div>
+
+            <h3 id="team-name">
+              Ім'я студента
+            </h3>
+
+            <p id="team-description">
+              Інформація про роботу, яку він виконує
+            </p>
+
+            <div
+              class="team-dots"
+              id="team-dots"
+            >
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="team-arrow team-next"
+            id="team-next"
+          >
+            ›
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           МЕСТО ДЛЯ ДРУГИХ ИГР
+      ========================== -->
+
+      <section class="other-games-placeholder bottom-placeholder">
+
+        <!--
+          другие игры
+        -->
+
+      </section>
+
+
+    </div>
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer id="contacts" class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-logo">
+
+        <span class="logo-code">&lt;/&gt;</span>
+
+        <span class="logo-text">
+          Coding
+          <small>Magic</small>
+        </span>
+
+      </div>
+
+
+      <div class="footer-info">
+
+        <p>Тел: +38 (123) 456 78 90</p>
+        <p>E-mail: codingmagic@gmail.com</p>
+        <p>Facebook: CodingMagic</p>
+        <p>Twitter: CodingMagic</p>
+        <p>Instagram: CodingMagic</p>
+
+      </div>
+
+
+      <form class="subscribe-form" id="subscribe-form">
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Ваша ел. адреса..."
+          required
+        />
+
+        <button type="submit">
+          Підписатись
+        </button>
+
+      </form>
+
+    </div>
+
+  </footer>
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
