@@ -13,6 +13,54 @@ themeToggle.addEventListener("change", () => {
 
 
 /* =========================
+   МЕНЮ ІНТЕРАКТИВІВ
+========================= */
+
+const gamesMenuToggle =
+  document.querySelector("#games-menu-toggle");
+
+const gamesMenu =
+  document.querySelector("#games-menu");
+
+const gamesDropdown =
+  gamesMenu.parentElement;
+
+
+gamesMenuToggle.addEventListener("click", () => {
+
+  const isOpen =
+    gamesMenuToggle.getAttribute("aria-expanded") === "true";
+
+  gamesMenuToggle.setAttribute(
+    "aria-expanded",
+    String(!isOpen)
+  );
+
+  gamesDropdown.classList.toggle(
+    "is-open",
+    !isOpen
+  );
+
+});
+
+
+gamesMenu.addEventListener("click", () => {
+
+  gamesMenuToggle.setAttribute("aria-expanded", "false");
+  gamesDropdown.classList.remove("is-open");
+
+});
+
+
+gamesDropdown.addEventListener("mouseleave", () => {
+
+  gamesMenuToggle.setAttribute("aria-expanded", "false");
+  gamesDropdown.classList.remove("is-open");
+
+});
+
+
+/* =========================
    КАЛЬКУЛЯТОР
 ========================= */
 
