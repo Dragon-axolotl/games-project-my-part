@@ -87,6 +87,81 @@ body {
   text-decoration: underline;
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+/* Невидима зона між кнопкою та меню, щоб меню не зникало під час руху курсора. */
+.nav-dropdown::after {
+  content: "";
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  width: 175px;
+  height: 16px;
+
+  transform: translateX(-50%);
+}
+
+.nav-dropdown-toggle {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: #222;
+
+  font: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.nav-dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+.games-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+
+  display: none;
+  width: 175px;
+  overflow: hidden;
+
+  border: 1px solid #222;
+  border-radius: 0 0 20px 20px;
+  background: #fff;
+
+  transform: translateX(-50%);
+}
+
+.games-menu a {
+  display: block;
+
+  padding: 11px 16px;
+
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.games-menu a:hover,
+.games-menu a:focus {
+  background: #eeeeee;
+  text-decoration: none;
+  outline: none;
+}
+
+.nav-dropdown:hover .games-menu,
+.nav-dropdown:focus-within .games-menu,
+.nav-dropdown.is-open .games-menu {
+  display: block;
+}
+
 
 /* HEADER RIGHT */
 
@@ -519,8 +594,23 @@ body.dark-theme main {
 }
 
 body.dark-theme .navigation a,
-body.dark-theme .logo {
+body.dark-theme .logo,
+body.dark-theme .nav-dropdown-toggle {
   color: white;
+}
+
+body.dark-theme .games-menu {
+  border-color: #fff;
+  background: #333;
+}
+
+body.dark-theme .games-menu a {
+  color: white;
+}
+
+body.dark-theme .games-menu a:hover,
+body.dark-theme .games-menu a:focus {
+  background: #555;
 }
 
 body.dark-theme .number-input,
