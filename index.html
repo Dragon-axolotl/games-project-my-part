@@ -28,7 +28,23 @@
       </a>
 
       <nav class="navigation">
-        <a href="#games">Інтерактиви</a>
+        <div class="nav-dropdown">
+          <button
+            type="button"
+            class="nav-dropdown-toggle"
+            id="games-menu-toggle"
+            aria-expanded="false"
+            aria-controls="games-menu"
+          >
+            Інтерактиви <span aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="games-menu" id="games-menu">
+            <a href="#games">Числовий</a>
+            <a href="#games">Ігровий</a>
+            <a href="#games">Ознайомчий</a>
+          </div>
+        </div>
         <a href="#team">Наша команда</a>
         <a href="#contacts">Контакти</a>
       </nav>
